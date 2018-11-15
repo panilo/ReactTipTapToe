@@ -46,12 +46,11 @@ function SortButton(props){
 }
 
 function SpecialThanks(){
-  /*return(
+  return(
     <div className="special-thanks">
-      Thanks Vale <FAIcont iconName="heart red" />
+      Thanks a me! <FAIcont iconName="heart red" />
     </div>
-  );*/
-  return(<div></div>); 
+  );  
 }
 
 function FAIcont(props){
