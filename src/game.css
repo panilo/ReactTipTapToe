@@ -11,7 +11,8 @@ ol, ul {
   border-radius: 3px;
   font-size: 40px;
   margin: 0 3px 0 3px;
-  display: inline;
+  display: inline;  
+  cursor: pointer;
 }
 .action-button:hover{
   background-color: #61dafb;
