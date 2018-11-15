@@ -51,7 +51,7 @@ function SpecialThanks(){
       Thanks Vale <FAIcont iconName="heart red" />
     </div>
   );*/
-  return(<div></div>);
+  return(<div></div>); 
 }
 
 function FAIcont(props){
