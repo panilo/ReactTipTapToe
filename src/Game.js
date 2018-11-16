@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as FAI from '@fortawesome/free-solid-svg-icons'
 
 class SquareObsolete extends Component {
   //Class, or components in ReactJS meaning, without constructor are stateless functional components
@@ -23,24 +25,24 @@ function Square(props) {
 
 function UndoButton(props){
   return(
-    <button className="undo-button action-button" onClick={() => props.onClick()}>
-      <FAIcont iconName="undo" />
+    <button className="undo-button action-button" onClick={() => props.onClick()} disabled={props.disabled}>
+      <FontAwesomeIcon icon={FAI.faStepBackward} />
     </button>
   );
 }
 
 function ResetButton(props){
   return(
-    <button className="reset-button action-button" onClick={() => props.onClick()}>
-      <FAIcont iconName="times" />
+    <button className="reset-button action-button" onClick={() => props.onClick()} disabled={props.disabled}>
+      <FontAwesomeIcon icon={FAI.faTimes} />
     </button>
   );
 }
 
 function SortButton(props){
   return(
-    <button className="sort-button action-button" onClick={() => props.onClick()}>
-      <FAIcont iconName="sort" />
+    <button className="sort-button action-button" onClick={() => props.onClick()} disabled={props.disabled}>
+      <FontAwesomeIcon icon={FAI.faSort} />
     </button>
   );
 }
@@ -48,16 +50,9 @@ function SortButton(props){
 function SpecialThanks(){
   return(
     <div className="special-thanks">
-      Thanks a me! <FAIcont iconName="heart red" />
+      Powered with love by DoubleD <FontAwesomeIcon icon={FAI.faHandPeace} />
     </div>
   );  
-}
-
-function FAIcont(props){
-  let composedClassName = "fa fa-" + props.iconName;
-  return(
-    <i className={composedClassName} aria-hidden="true"></i>
-  );
 }
 
 class Board extends Component {
@@ -195,9 +190,9 @@ class Game extends React.Component {
           </div>
           <div className="game-info">
             <div className="game-status">{status}</div>
-            <UndoButton onClick={() => this.handleUndo()} />
-            <ResetButton onClick={() => this.jumpTo(0)} />
-            <SortButton onClick={() => this.handleHistorySort()} />
+            <UndoButton onClick={() => this.handleUndo()} disabled={moves.length <= 1} />
+            <ResetButton onClick={() => this.jumpTo(0)} disabled={moves.length <= 1} />
+            <SortButton onClick={() => this.handleHistorySort()} disabled={moves.length <= 1} />
             <ol>{moves}</ol>
           </div>        
         </div>      
