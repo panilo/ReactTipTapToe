@@ -58,6 +58,7 @@ ol, ul {
 
 .game {
   margin: auto;
+  width: 50%;
 }
 
 .game-board{
@@ -119,7 +120,7 @@ ol, ul {
   to { transform: scale(1.1); }
 }
 
-@media(min-width: 950px){
+@media(min-width: 991px){
   .game {
     display: flex;
     flex-direction: row;
@@ -139,12 +140,18 @@ ol, ul {
   }
 }
 
-@media(max-width: 949px){
+@media(max-width: 991px){
   ol, ul, .sort-button {
     display: none;
-  }  
+  }    
   .game-info{
     text-align: center;
     margin-left: 0;
+  }
+}
+
+@media(max-width: 575px){
+  .game{
+    width: 80%;
   }
 }
