@@ -2,29 +2,30 @@ body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 0px;
 }
-ol, ul {
+ol,
+ul {
   padding-left: 30px;
 }
-.action-button{
+.action-button {
   background: none;
   border: 1px solid #999;
   border-radius: 3px;
   font-size: 40px;
   margin: 0 3px 0 3px;
-  display: inline;    
+  display: inline;
 }
-.action-button:hover:enabled{
+.action-button:hover:enabled {
   background-color: #61dafb;
   cursor: pointer;
 }
 
-#container{
+#container {
   margin: 20px;
 }
 
 .game-status {
   margin-bottom: 14px;
-  font-size: 40px;  
+  font-size: 40px;
 }
 
 .square {
@@ -44,8 +45,8 @@ ol, ul {
   cursor: pointer;
 }
 
-.winner.square{
-  background: #ffff00;
+.winner.square {
+  background: #00f3ff;
 }
 
 .square:focus {
@@ -61,11 +62,11 @@ ol, ul {
   width: 50%;
 }
 
-.game-board{
+.game-board {
   width: 100%;
 }
 
-.board-row{
+.board-row {
   display: table;
   width: 100%;
   margin-bottom: -2px;
@@ -83,21 +84,21 @@ ol, ul {
 }
 
 .game-info > div,
-.move{
-  font-weight: 600;  
+.move {
+  font-weight: 600;
 }
 
-.move > a{
+.move > a {
   text-decoration: none;
   color: black;
 }
 
 .active.move,
-.active.move > a{
+.active.move > a {
   color: #61dafb !important;
 }
 
-.special-thanks{
+.special-thanks {
   text-align: center;
   font-size: 10px;
   font-weight: 600;
@@ -107,51 +108,57 @@ ol, ul {
   width: 100%;
 }
 
-.red{
+.red {
   color: #ff0000;
 }
 
-.fa-heart{
-  animation: Heart-Rate infinite 1s ease
+.fa-heart {
+  animation: Heart-Rate infinite 1s ease;
 }
 
 @keyframes Heart-Rate {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
-@media(min-width: 991px){
+@media (min-width: 991px) {
   .game {
     display: flex;
     flex-direction: row;
     width: 60%;
     margin: auto;
   }
-  .game-board{
+  .game-board {
     width: 450px;
   }
-  .game-info{
+  .game-info {
     width: 300px;
     margin-top: 0;
   }
-  .square{
+  .square {
     min-height: 150px;
     font-size: 140px;
   }
 }
 
-@media(max-width: 991px){
-  ol, ul, .sort-button {
+@media (max-width: 991px) {
+  ol,
+  ul,
+  .sort-button {
     display: none;
-  }    
-  .game-info{
+  }
+  .game-info {
     text-align: center;
     margin-left: 0;
   }
 }
 
-@media(max-width: 575px){
-  .game{
+@media (max-width: 575px) {
+  .game {
     width: 80%;
   }
 }
